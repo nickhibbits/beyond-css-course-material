@@ -1,3 +1,8 @@
+$clr-neutral-100: #f8f7f7;
+$clr-neutral-900: #201e1f;
+$clr-red: #da3f0b;
+$clr-bold-1: $clr-red;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +12,8 @@ body {
   font-size: 1.75rem;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
+  background-color: $clr-neutral-100;
+  color: $clr-neutral-900;
 
   /* this is being used to center the content on the screen */
   display: grid;
@@ -19,12 +26,34 @@ body {
   gap: 0.75em;
   width: min(90%, 60rem);
   padding: 2em;
+  box-shadow: 0 0 2rem $clr-neutral-900;
+
+  &__title {
+    color: $clr-bold-1;
+  }
 }
 
 .btn {
   display: inline-block;
   padding: 0.5em 1.5em;
   text-decoration: none;
+  border: solid 2px $clr-bold-1;
+
+  &:hover {
+    color: $clr-neutral-100;
+    background-color: $clr-neutral-900;
+    box-shadow: 0 0 2rem $clr-bold-1;
+  }
+
+  &--primary {
+    color: $clr-neutral-100;
+    background: $clr-bold-1;
+  }
+
+  &--outline {
+    color: $clr-bold-1;
+    background: $clr-neutral-100;
+  }
 }
 
 .flex-group {
